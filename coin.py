@@ -117,8 +117,8 @@ def plot_posterior(X, T):
     print(F[idx]);
     
     plt.plot(F, y, c='blue')
-    plt.xlabel('Bias-weighting for heads', fontsize = 14)
-    plt.ylabel('Probability(H)', fontsize = 14)
+    plt.xlabel('Fairness F', fontsize = 14)
+    plt.ylabel('Probability(F)', fontsize = 14)
     plt.axvline(0.5, ls='--', c='k')
     plt.axvline(F[idx], ls='--', c='blue')
     plt.title(str(X) + ' heads, ' + str(T) + ' tails, total ' + str(X+T) +' tosses')
@@ -157,8 +157,8 @@ def calculate_fairness(data):
     print("The maximum posterior probability of the fairness of your coin is: %f"%F[idx]);
     
     plt.plot(F, y, c='blue')
-    plt.xlabel('Fairness H', fontsize = 14)
-    plt.ylabel('Probability(H)', fontsize = 14)
+    plt.xlabel('Fairness F', fontsize = 14)
+    plt.ylabel('Probability(F)', fontsize = 14)
     plt.axvline(0.5, ls='--', c='k')
     plt.axvline(F[idx], c='blue')
     plt.title(str(X) + ' heads, ' + str(T) + ' tails, total ' + str(X+T) +' tosses')
@@ -252,12 +252,14 @@ def vary_tosses(pheads=0.5):
         ax.legend(loc='best')
     
         #disable y axis label
-        ax.yaxis.set_visible(False)
+        #ax.yaxis.set_visible(False)
 
         # Setting the x-axis major tick's label
         ax.set_xticks([0, 0.25, 0.5, 0.75, 1])
         ax.set_xticklabels(['0','','0.5','','1'])
-        plt.axvline(0.5, ls='--', c='k')     
+        plt.axvline(0.5, ls='--', c='k')
+        ax.set_xlabel('Fairness F', fontsize = 14)
+        ax.set_ylabel('Probability(F)', fontsize = 14)     
     
         if pheads > 0.0:
             idx = np.argmax([y]);
@@ -326,11 +328,13 @@ def vary_tosses_Gaussian(pheads=0.5):
         ax.legend(loc='best')
     
         #disable y axis label
-        ax.yaxis.set_visible(False)
+        #ax.yaxis.set_visible(False)
 
         # Setting the x-axis major tick's label
         ax.set_xticks([0, 0.25, 0.5, 0.75, 1])
         ax.set_xticklabels(['0','','0.5','','1'])
+        ax.set_xlabel('Fairness F', fontsize = 14)
+        ax.set_ylabel('Probability(F)', fontsize = 14)
         plt.axvline(0.5, ls='--', c='k')     
     
         if pheads > 0.0:
