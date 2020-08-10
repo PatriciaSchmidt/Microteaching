@@ -217,7 +217,7 @@ def vary_tosses(pheads=0.5):
     '''
     
     fig = plt.figure(figsize = (15,15))
-    n_tosses = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
+    n_tosses = [0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
 
     F = np.linspace(1e-6,1.-1e-6,500)
     
@@ -278,7 +278,7 @@ def vary_tosses_Gaussian(pheads=0.5):
     '''
     
     fig = plt.figure(figsize = (15,15))
-    n_tosses = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
+    n_tosses = [0, 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
 
     F = np.linspace(1e-6,1.-1e-6,500)
     
