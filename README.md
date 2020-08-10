@@ -8,9 +8,9 @@ Before you get started, get:
 
 In many data analysis problems across all disciplines, we are often concerned with estimating the values of parameters based on measured empirical data that has a random component: In politics, one may wish to estimate the winner of an election based on exit polls; in physics, Millikan sought to measure the value of the charge of the electron; in medical research, one may wish to estimate the effectiveness of a drug by designing an adaptive trial which, at each stage, takes the results from the previous stage into account. To do so, we require an estimator to approximate the unknown parameters using the measurements. The common approach to this is probability theory, which allows us to determine the probability distribution of a parameter given a statistical sample, i.e. measurements/data. 
 
-Probability theory comes in different flavours and you are most likely already familiar with the frequentist statistic, where the goal is to assign a probability P to the data given a model or hypothesis H, $P(data|H)$
+Probability theory comes in different flavours and you are most likely already familiar with the frequentist statistic, where the goal is to assign a probability P to the data given a model or hypothesis H, `$P(data|H)$`.
 
-A different view is presented by Bayesian probability theory named after Rev Thomas Bayes FIG. Here, we seek to determine the (posterior) probability $P$ of a model/hypothesis given some data and any prior information I on the model we have $P(H|data,I)$
+A different view is presented by Bayesian probability theory named after Rev Thomas Bayes FIG. Here, we seek to determine the (posterior) probability `$P$` of a model/hypothesis given some data and any prior information I on the model we have `$P(H|data,I)$`.
 
 While in the frequentist approach we seek to rule out models/hypotheses, in Bayesian statistics we seek to determine their relative probabilities. 
 
